@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace IMSApi.Migrations
 {
     [DbContext(typeof(ImsdbContext))]
-    [Migration("20230131021358_initial")]
+    [Migration("20230131065214_initial")]
     partial class initial
     {
         /// <inheritdoc />
@@ -32,6 +32,11 @@ namespace IMSApi.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AccessLevelId"));
+
+                    b.Property<string>("Description")
+                        .HasMaxLength(255)
+                        .IsUnicode(false)
+                        .HasColumnType("varchar(255)");
 
                     b.HasKey("AccessLevelId")
                         .HasName("PK__AccessLe__5E44DFD559F02675");
