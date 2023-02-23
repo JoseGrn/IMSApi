@@ -23,11 +23,5 @@ public partial class Employee
 
     public DateTime? CreatedDate { get; set; }
 
-    public virtual AccessLevel? AccessLevel { get; set; }
-
-    public virtual Company? Company { get; set; }
-
     public virtual ICollection<EmployeeWarehouse> EmployeeWarehouses { get; } = new List<EmployeeWarehouse>();
-
-    public virtual Owner? Owner { get; set; }
 }

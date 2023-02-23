@@ -21,9 +21,5 @@ public partial class Owner
 
     public DateTime? CreatedDate { get; set; }
 
-    public virtual AccessLevel? AccessLevel { get; set; }
-
-    public virtual Company? Company { get; set; }
-
     public virtual ICollection<Employee> Employees { get; } = new List<Employee>();
 }

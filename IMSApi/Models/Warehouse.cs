@@ -13,8 +13,6 @@ public partial class Warehouse
 
     public string? Direction { get; set; }
 
-    public virtual Company? Company { get; set; }
-
     public virtual ICollection<EmployeeWarehouse> EmployeeWarehouses { get; } = new List<EmployeeWarehouse>();
 
     public virtual ICollection<Product> Products { get; } = new List<Product>();

@@ -14,6 +14,4 @@ public partial class Product
     public int? Quantity { get; set; }
 
     public string? Description { get; set; }
-
-    public virtual Warehouse? Warehouse { get; set; }
 }
